@@ -109,17 +109,8 @@ namespace :sneakers do
     else
       args = []
       # Using custom sneakers setup
-      # args.push "--index #{idx}"
       args.push "--pid-path #{pid_file}"
-      # args.push "--environment #{fetch(:sneakers_env)}"
-      # args.push "--logfile #{fetch(:sneakers_log)}" if fetch(:sneakers_log)
       args.push "--require #{fetch(:sneakers_require)}" if fetch(:sneakers_require)
-      # args.push "--tag #{fetch(:sneakers_tag)}" if fetch(:sneakers_tag)
-      # Array(fetch(:sneakers_queue)).each do |queue|
-      #   args.push "--queue #{queue}"
-      # end
-      # args.push "--config #{fetch(:sneakers_config)}" if fetch(:sneakers_config)
-      # args.push "--concurrency #{fetch(:sneakers_concurrency)}" if fetch(:sneakers_concurrency)
       # use sneakers_options for special options
       args.push fetch(:sneakers_options) if fetch(:sneakers_options)
 
